@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NewsFragments</string>
+    <string name="notification_channel_name">News</string>
+    <string name="notification_channel_desc">Notifications of the latest news</string>
+    
+    <string name="label_notif">Notifications:</string>
+    <string name="btn_test_notification">🔔</string>
+    <string name="btn_threads">⏱ Threads</string>
+    <string name="btn_run_benchmark">Run Benchmark</string>
+    
+    <string name="text_thread_measuring">Thread: Measuring...</string>
+    <string name="text_executor_measuring">ExecutorService: Measuring...</string>
+    <string name="text_asynctask_measuring">AsyncTask: Measuring...</string>
+    <string name="text_workmanager_measuring">WorkManager: Measuring...</string>
+    <string name="text_service_measuring">Service: Measuring...</string>
+    
+    <string name="text_thread_result">Native Thread: %1$d ms</string>
+    <string name="text_executor_result">ExecutorService: %1$d ms</string>
+    <string name="text_asynctask_result">AsyncTask (deprecated): %1$d ms</string>
+    <string name="text_workmanager_result">WorkManager: %1$d ms (scheduling overhead)</string>
+    <string name="text_service_result">Service (Broadcast): %1$d ms</string>
+    
+    <string name="asynctask_explanation">📌 Why was AsyncTask deprecated in Android 11?\n\n• Memory leaks: AsyncTask holds an implicit reference to the Activity.\n• Ignored lifecycle: keeps running even if the Activity is destroyed.\n• Serial execution by default since Android 3.0 (one task after another).\n• Results delivered to dead activities → NullPointerException.\n\n✅ Alternatives: ExecutorService + Handler, WorkManager, or Coroutines.</string>
+    
+    <string name="search_hint">Search news by title...</string>
+    <string name="sort_date">Date</string>
+    <string name="sort_importance">Importance</string>
+    <string name="notif_toggle">Notif</string>
+    <string name="welcome_news">Select a news story to view its details here.</string>
+    <string name="source_label">Source: %1$s</string>
+    <string name="importance_label">Importance: %1$d/5</string>
+    <string name="date_label">Date: %1$s</string>
+</resources>

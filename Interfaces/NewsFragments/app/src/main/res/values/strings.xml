@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NewsFragments</string>
+    <string name="notification_channel_name">Noticias</string>
+    <string name="notification_channel_desc">Notificaciones de las últimas noticias</string>
+    
+    <string name="label_notif">Notificaciones:</string>
+    <string name="btn_test_notification">🔔</string>
+    <string name="btn_threads">⏱ Threads</string>
+    <string name="btn_run_benchmark">Ejecutar Benchmark</string>
+    
+    <string name="text_thread_measuring">Thread: Midiendo...</string>
+    <string name="text_executor_measuring">ExecutorService: Midiendo...</string>
+    <string name="text_asynctask_measuring">AsyncTask: Midiendo...</string>
+    <string name="text_workmanager_measuring">WorkManager: Midiendo...</string>
+    <string name="text_service_measuring">Service: Midiendo...</string>
+    
+    <string name="text_thread_result">Thread nativo: %1$d ms</string>
+    <string name="text_executor_result">ExecutorService: %1$d ms</string>
+    <string name="text_asynctask_result">AsyncTask (deprecated): %1$d ms</string>
+    <string name="text_workmanager_result">WorkManager: %1$d ms (scheduling overhead)</string>
+    <string name="text_service_result">Service (Broadcast): %1$d ms</string>
+    
+    <string name="asynctask_explanation">📌 ¿Por qué se deprecó AsyncTask en Android 11?\n\n• Fugas de memoria: AsyncTask mantiene una referencia implícita a la Activity.\n• Sin respeto al ciclo de vida: sigue ejecutándose incluso si la Activity ha muerto.\n• Ejecución serial por defecto desde Android 3.0 (un task tras otro).\n• Resultados en actividades destruidas → NullPointerException.\n\n✅ Alternativas: ExecutorService + Handler, WorkManager o Coroutines.</string>
+    
+    <string name="search_hint">Buscar noticia por título...</string>
+    <string name="sort_date">Fecha</string>
+    <string name="sort_importance">Importancia</string>
+    <string name="notif_toggle">Notif</string>
+    <string name="welcome_news">Selecciona una noticia para ver los detalles aquí.</string>
+    <string name="source_label">Fuente: %1$s</string>
+    <string name="importance_label">Importancia: %1$d/5</string>
+    <string name="date_label">Fecha: %1$s</string>
+</resources>

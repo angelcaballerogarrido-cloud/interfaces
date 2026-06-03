@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Layout DUAL PANE: modo landscape (horizontal) para móviles y tablets -->
+<!-- Tiene AMBOS contenedores: list_container y detail_container lado a lado -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <!-- Toolbar superior -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/shape_toolbar"
+        android:padding="8dp"
+        android:gravity="center_vertical"
+        android:elevation="4dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="📰 NewsFragments"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/white" />
+
+        <!-- Buscador -->
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="4"
+            android:background="@drawable/shape_badge"
+            android:paddingHorizontal="10dp"
+            android:hint="@string/search_hint"
+            android:textColorHint="@color/divider"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:singleLine="true"
+            android:layout_marginEnd="6dp" />
+
+        <!-- Ordenación -->
+        <Spinner
+            android:id="@+id/spinner_sort"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_notif"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:layout_marginEnd="4dp" />
+
+        <!-- Intervalo -->
+        <Spinner
+            android:id="@+id/spinner_interval"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white" />
+
+        <Switch
+            android:id="@+id/switch_notifications"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:thumbTint="@color/white"
+            android:trackTint="@color/primary_dark"
+            android:layout_marginStart="4dp" />
+
+        <Button
+            android:id="@+id/btn_test_notification"
+            style="@style/ButtonSecondary"
+            android:layout_marginStart="6dp"
+            android:text="🔔" />
+
+        <Button
+            android:id="@+id/btn_threads"
+            style="@style/ButtonSecondary"
+            android:layout_marginStart="4dp"
+            android:text="⏱ Threads" />
+    </LinearLayout>
+
+    <!-- Contenido dual pane: lista a la izquierda, detalle a la derecha -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <!-- Panel izquierdo: Lista de noticias (40% del ancho) -->
+        <FrameLayout
+            android:id="@+id/list_container"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="40"
+            android:background="@color/surface" />
+
+        <!-- Divisor vertical -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/divider" />
+
+        <!-- Panel derecho: Detalle de noticia (60% del ancho) -->
+        <FrameLayout
+            android:id="@+id/detail_container"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@color/background" />
+
+    </LinearLayout>
+
+</LinearLayout>

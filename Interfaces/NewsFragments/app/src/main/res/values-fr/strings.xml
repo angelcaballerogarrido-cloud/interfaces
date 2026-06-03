@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NewsFragments</string>
+    <string name="notification_channel_name">Nouvelles</string>
+    <string name="notification_channel_desc">Notifications des dernières nouvelles</string>
+    
+    <string name="label_notif">Notifications:</string>
+    <string name="btn_test_notification">🔔</string>
+    <string name="btn_threads">⏱ Threads</string>
+    <string name="btn_run_benchmark">Lancer le Benchmark</string>
+    
+    <string name="text_thread_measuring">Thread: Mesure...</string>
+    <string name="text_executor_measuring">ExecutorService: Mesure...</string>
+    <string name="text_asynctask_measuring">AsyncTask: Mesure...</string>
+    <string name="text_workmanager_measuring">WorkManager: Mesure...</string>
+    <string name="text_service_measuring">Service: Mesure...</string>
+    
+    <string name="text_thread_result">Thread natif: %1$d ms</string>
+    <string name="text_executor_result">ExecutorService: %1$d ms</string>
+    <string name="text_asynctask_result">AsyncTask (déprécié): %1$d ms</string>
+    <string name="text_workmanager_result">WorkManager: %1$d ms (surcharge d\'ordonnancement)</string>
+    <string name="text_service_result">Service (Broadcast): %1$d ms</string>
+    
+    <string name="asynctask_explanation">📌 Pourquoi AsyncTask a-t-il été déprécié dans Android 11?\n\n• Fuites de mémoire: AsyncTask conserve une référence implicite à l\'Activité.\n• Non-respect du cycle de vie: continue de s\'exécuter même si l\'Activité est morte.\n• Exécution en série par défaut depuis Android 3.0 (une tâche après l\'autre).\n• Résultats délivrés à des activités détruites → NullPointerException.\n\n✅ Alternatives: ExecutorService + Handler, WorkManager ou Coroutines.</string>
+    
+    <string name="search_hint">Rechercher une nouvelle par titre...</string>
+    <string name="sort_date">Date</string>
+    <string name="sort_importance">Importance</string>
+    <string name="notif_toggle">Notif</string>
+    <string name="welcome_news">Sélectionnez une nouvelle pour voir les détails ici.</string>
+    <string name="source_label">Source: %1$s</string>
+    <string name="importance_label">Importance: %1$d/5</string>
+    <string name="date_label">Date: %1$s</string>
+</resources>

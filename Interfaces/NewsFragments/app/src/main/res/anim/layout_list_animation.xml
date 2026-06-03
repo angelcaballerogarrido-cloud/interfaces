@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- LayoutAnimationController: aplica list_item_anim a cada item de la lista
+     con un delay incremental (delay=0.15 del total de la animación entre cada item) -->
+<layoutAnimation xmlns:android="http://schemas.android.com/apk/res/android"
+    android:animation="@anim/list_item_anim"
+    android:delay="0.15"
+    android:animationOrder="normal" />
